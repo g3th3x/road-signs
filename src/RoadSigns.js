@@ -1,6 +1,6 @@
+import { getContext } from "./utils/context.js";
 import { NoEntry } from "./entities/NoEntry.js";
 import { NoEntryBrick } from "./entities/NoEntryBrick.js";
-import { getContext } from "./utils/context.js";
 
 export class RoadSigns {
   ctx = getContext();

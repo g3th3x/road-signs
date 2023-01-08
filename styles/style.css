@@ -9,9 +9,12 @@ body {
     display: flex;
 }
 
-body,
-canvas {
+body {
     background-color: #000;
+}
+canvas {
+    background-color: #fff;
+    border: 3px dotted rgb(102, 110, 218)
 }
 
 canvas{
