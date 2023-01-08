@@ -1,8 +1,17 @@
+import { NoEntry } from "./entities/NoEntry.js";
+import { NoEntryBrick } from "./entities/NoEntryBrick.js";
+import { getContext } from "./utils/context.js";
+
 export class RoadSigns {
+  ctx = getContext();
+  signs = [new NoEntry(), new NoEntryBrick()];
   constructor() {
-    this.name;
+    this.entities = [...this.signs];
   }
+  update() {}
   draw() {
-    console.log("Yeap!");
+    for (const entity of this.entities) {
+      entity.draw();
+    }
   }
 }
