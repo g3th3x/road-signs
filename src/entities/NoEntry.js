@@ -1,10 +1,8 @@
 import { Signs } from "./Signs.js";
-import { getContext } from "../utils/context.js";
 
 export class NoEntry extends Signs {
   constructor() {
     super("No entry");
-    this.ctx = getContext();
   }
   draw() {
     this.position = {
