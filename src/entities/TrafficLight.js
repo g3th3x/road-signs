@@ -14,7 +14,6 @@ export class TrafficLight extends Signs {
 }
 
 function trafficLight(ctx, position) {
-  const lightColor = ["#ff0000", "#fff000", "#00ff00", "#5c5a5a"];
   // External circle
   ctx.beginPath();
   ctx.strokeStyle = "#000";
@@ -33,10 +32,15 @@ function trafficLight(ctx, position) {
   ctx.fill();
   // Shapes
   for (let i = 0; i < 3; i++) {
-    ctx.beginPath();
-    ctx.fillStyle = lightColor[i];
-    let y = position.y + i * 50;
-    ctx.arc(position.x, y, 20, 0, Math.PI * 2);
-    ctx.fill();
+    light(ctx, position, i, i);
   }
+}
+
+function light(ctx, position, color = 0, place = 0) {
+  const lightColor = ["#ff0000", "#fff000", "#00ff00", "#5c5a5a"];
+  ctx.beginPath();
+  ctx.fillStyle = lightColor[color];
+  let y = position.y + place * 50;
+  ctx.arc(position.x, y, 20, 0, Math.PI * 2);
+  ctx.fill();
 }

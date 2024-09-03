@@ -4,6 +4,8 @@ import {
   NoEntry,
   NoEntryBrick,
   TrafficLight,
+  NoParking,
+  NoStoppingOrStanding
 } from "./entities/index.js";
 
 export class RoadSigns {
@@ -13,6 +15,8 @@ export class RoadSigns {
     new NoEntryBrick(),
     new GoStraightAhead(),
     new TrafficLight(),
+    new NoParking(),
+    new NoStoppingOrStanding()
   ];
   constructor() {
     this.entities = [...this.signs];
@@ -21,6 +25,7 @@ export class RoadSigns {
   draw() {
     for (const entity of this.entities) {
       entity.draw();
+      entity.getName();
     }
   }
 }

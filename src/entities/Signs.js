@@ -5,7 +5,7 @@ export class Signs {
     this.name = name;
     this.ctx = getContext();
   }
-  draw() {
+  getName() {
     console.log(this.name);
   }
 }
